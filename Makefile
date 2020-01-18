@@ -1,5 +1,5 @@
 .PHONY: test
-#mowi zeby zignorowal ze test dziala i pusci test 
+#mowi zeby zignorowal ze test dziala i pusci test
 deps:
 	pip install -r requirements.txt; \
 	pip install -r test_requirements.txt
@@ -12,3 +12,6 @@ lint:
 
 run:
 	PYTHONPATH=. FLASK_APP=hello_world flask run
+
+docker_build:
+	docker buid -t hello_world-printer
