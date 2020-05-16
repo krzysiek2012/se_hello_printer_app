@@ -1,3 +1,9 @@
+.. image:: https://app.statuscake.com/button/index.php?Track=3tUBihXJbe&Days=1&Design=1
+:target: www.statuscake.com
+
+.. image:: https://travis-ci.org/krzysiek2012/se_hello_printer_app.svg?branch=master
+:target: https://travis-ci.org/krzysiek2012/se_hello_printer_app
+
 Simple Flask App
 ================
 
@@ -20,7 +26,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
     $ pip install -r test_requirements.txt
 
     # z makefile
-    $ make deps 
+    $ make deps
 
   Sprawdź: [documentację virtualenvwrappera] (https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html) _ oraz [biblioteki flask] (http://flask.pocoo.org).
 
