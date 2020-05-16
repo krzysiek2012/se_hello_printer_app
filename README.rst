@@ -1,5 +1,5 @@
 .. image:: https://app.statuscake.com/button/index.php?Track=3tUBihXJbe&Days=1&Design=1
-  :target: www.statuscake.com
+  :target: https://www.statuscake.com
 
 .. image:: https://travis-ci.org/krzysiek2012/se_hello_printer_app.svg?branch=master
   :target: https://travis-ci.org/krzysiek2012/se_hello_printer_app
@@ -14,8 +14,6 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
   ::
 
-    # centos, add to ~/.bashrc
-    $ source /usr/bin/virtualenvwrapper.sh
 
     # ubuntu, add to ~/.bashrc
     $ source /usr/local/bin/virtualenvwrapper.sh
