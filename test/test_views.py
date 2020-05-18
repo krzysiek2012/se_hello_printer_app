@@ -3,6 +3,10 @@ from hello_world import app
 from hello_world.formater import SUPPORTED
 
 
+koko = b'<greetings>\n\t\
+<name>Kokos</name>\n\t<msg>Hello World!</msg>\n</greetings>\n'
+
+
 class FlaskrTestCase(unittest.TestCase):
     def setUp(self):
         app.config['TESTING'] = True
@@ -17,6 +21,6 @@ class FlaskrTestCase(unittest.TestCase):
         rv = self.app.get('/?output=json')
         self.assertEqual(b'{ "imie":"Kokos", "mgs":"Hello World!"}', rv.data)
 
-    def test_msg_with_output(self):
+    def test_msg_with_output_xml(self):
         rv = self.app.get('/?output=xml')
-        self.assertEqual(b'<greetings>\n\t<name>Kokos</name>\n\t<msg>Hello World!</msg>\n</greetings>\n', rv.data)
+        self.assertEqual(koko, rv.data)
