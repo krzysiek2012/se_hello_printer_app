@@ -3,8 +3,9 @@ from hello_world import app
 from hello_world.formater import SUPPORTED
 
 
-koko = b'<greetings>\n\t\
-<name>Kokos</name>\n\t<msg>Hello World!</msg>\n</greetings>\n'
+koko = b'<?xml version="1.0" ?>\n\
+<greetings>\n    <name>Kokos</name>\n    \
+<mgs>Hello World!</mgs>\n</greetings>\n'
 
 
 class FlaskrTestCase(unittest.TestCase):
