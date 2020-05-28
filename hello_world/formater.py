@@ -29,10 +29,12 @@ def format_to_json(msg, imie):
 
 
 def format_to_xml(msg, imie):
-    return ('<greetings>\n' +
-            '\t<name>' + imie + '</name>\n' +
-            '\t<msg>' + msg + '</msg>\n' +
-            '</greetings>\n')
+    greetings = ET.Element("greetings")
+    imie = ET.SubElemnt(greetings, "imie")
+    imie.text() = "Kokos"
+    msg = ET.Element(greetings, "msg")
+    msg.text() = "Hello World!"
+    return ET.tostring(greetings) 
 
 
 def plain_text(msg, imie):
