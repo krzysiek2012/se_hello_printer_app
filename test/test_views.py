@@ -7,6 +7,8 @@ koko = b'<?xml version="1.0" ?>\n\
 <greetings>\n    <name>Kokos</name>\n    \
 <mgs>Hello World!</mgs>\n</greetings>\n'
 
+kikks = b'{\n    "imie": "Kokos",\n    "mgs": "Hello World!"\n}'
+
 
 class FlaskrTestCase(unittest.TestCase):
     def setUp(self):
@@ -20,7 +22,7 @@ class FlaskrTestCase(unittest.TestCase):
 
     def test_msg_with_output(self):
         rv = self.app.get('/?output=json')
-        self.assertEqual(b'{\n    "imie": "Kokos",\n    "mgs": "Hello World!"\n}', rv.data)
+        self.assertEqual(kikks, rv.data)
 
     def test_msg_with_output_xml(self):
         rv = self.app.get('/?output=xml')

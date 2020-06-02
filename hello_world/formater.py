@@ -30,6 +30,7 @@ def format_to_json(msg, imie):
     arg = {'imie': imie, 'mgs': msg}
     return json.dumps(arg, indent=4)
 
+
 def format_to_xml(msg, imie):
     greetings = ET.Element("greetings")
     ET.SubElement(greetings, "name").text = imie
