@@ -7,11 +7,7 @@ koko = b'<?xml version="1.0" ?>\n\
 <greetings>\n    <name>Kokos</name>\n    \
 <mgs>Hello World!</mgs>\n</greetings>\n'
 
-kikks = b'\
-{\n    \
-"imie": "Kokos",\n    \
-"mgs": "Hello World!"\n\
-}'
+kikks = b'{\n    "imie": "Kokos",\n    "mgs": "Hello World!"\n}'
 
 
 class FlaskrTestCase(unittest.TestCase):
