@@ -11,7 +11,7 @@ test_cov:
 	PYTHONPATH=. py.test --verbose -s --cov=.
 
 test_xunit:
-	PYTHONPATH=. py.test -s --cov=. -o junit_family=xunit1 --junit-xml=test_results.xml
+	PYTHONPATH=. py.test -s --cov=. -o junit_family=xunit2 --junit-xml=test_results.xml
 
 lint:
 	flake8 hello_world test
