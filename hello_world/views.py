@@ -19,3 +19,7 @@ def index():
 @app.route('/outputs')
 def supported_output():
     return ", ".join(SUPPORTED)
+
+@app.route('/<name>')
+def user(name):
+    return f'Hello world {name}'
