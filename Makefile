@@ -1,4 +1,7 @@
+SERVICE_NAME = hello-world-printer
+DOCKER_IMG_NAME = $(SERVICE_NAME)
 .PHONY: test
+.DEFAULT_GOAL := test
 #mowi zeby zignorowal ze test dziala i pusci test
 deps:
 	pip install -r requirements.txt; \
@@ -20,19 +23,22 @@ run:
 	PYTHONPATH=. FLASK_APP=hello_world flask run
 
 docker_build:
-	docker build -t hello-world-printer .
+	docker build -t $(DOCKER_IMG_NAME) .
 
 USERNAME=krzysiek2012
-TAG=$(USERNAME)/hello-world-printer
+TAG=$(USERNAME)/$(DOCKER_IMG_NAME)
 
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
-	docker tag hello-world-printer $(TAG); \
+	docker tag $(DOCKER_IMG_NAME) $(TAG); \
 	docker push $(TAG); \
 	docker logout;
 
 docker_run: docker_build
 	docker run \
-		--name hello-world-printer-dev \
+		--name $(DOCKER_IMG_NAME)-dev \
 			-p 5000:5000 \
-			-d hello-world-printer
+			-d $(DOCKER_IMG_NAME)
+
+docker_stop:
+	docker stop $(DOCKER_IMG_NAME)-dev
