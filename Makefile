@@ -16,6 +16,15 @@ test_cov:
 test_xunit:
 	PYTHONPATH=. py.test -s --cov=. -o junit_family=xunit2 --junit-xml=test_results.xml
 
+test_smoke:
+	curl --fail 127.0.0.1:5000
+
+test_json:
+	curl 127.0.0.1:5000/?output=json
+
+test_xml:
+	curl 127.0.0.1:5000/?output=xml
+
 lint:
 	flake8 hello_world test
 
