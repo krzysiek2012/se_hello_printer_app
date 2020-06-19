@@ -16,6 +16,11 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 
     # ubuntu, add to ~/.bashrc
+    #Na stronie można znaleźć informacje jak skonfigurować bash.rc
+    #aby virtualenv włączał się automatycznie wraz z Terminalem
+    #Kompatybilne z wersja Linux ubuntu 20.04
+    #https://dev.to/jsgurugit/how-to-setup-python-virtual-environment-for-python3-on-ubuntu-19-10-dkp
+    #
     $ source /usr/local/bin/virtualenvwrapper.sh
 
     # tworzymy hermetyczne środowisko dla bibliotek aplikacji:

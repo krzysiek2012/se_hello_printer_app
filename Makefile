@@ -1,8 +1,8 @@
 SERVICE_NAME = hello-world-printer
 DOCKER_IMG_NAME = $(SERVICE_NAME)
+#mowi zeby zignorowal ze test dziala i pusci test
 .PHONY: test
 .DEFAULT_GOAL := test
-#mowi zeby zignorowal ze test dziala i pusci test
 deps:
 	pip install -r requirements.txt; \
 	pip install -r test_requirements.txt
