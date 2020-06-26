@@ -51,3 +51,6 @@ docker_run: docker_build
 
 docker_stop:
 	docker stop $(DOCKER_IMG_NAME)-dev
+
+docker_rm:
+	docker rm $(DOCKER_IMG_NAME)-dev
